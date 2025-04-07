@@ -1,0 +1,24 @@
+/* Navigation.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.navbar a:hover {
+    color: #000;
+    background-color: #fff;
+}

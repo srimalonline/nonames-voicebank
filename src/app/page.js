@@ -1,11 +1,16 @@
+import Navigation from "@/components/Navigation";
 import Preloader from "@/components/Preloader";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    <Preloader />
-    <div className="h-screen flex items-center justify-center bg-[#213e60]">
+    {/* <Preloader /> */}
+    <div className="flex-1 h-screen">
+    {/* <Navigation /> */}
+    <div>
+      lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
     </div>
     </>
   );
