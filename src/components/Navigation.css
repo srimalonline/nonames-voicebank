@@ -22,3 +22,9 @@
     color: #000;
     background-color: #fff;
 }
+
+.active-link{
+    color: #000 !important;
+    background-color: #fff;
+    transition:1;
+}

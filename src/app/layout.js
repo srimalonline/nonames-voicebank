@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono,  Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import Preloader from "@/components/Preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,11 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}  ${playfairDisplay.variable} h-screen`}
       >
         <Navigation />
+        <Preloader />
+
+        <section className="container flex-1 m-auto mt-5">
         {children}
+        </section>
       </body>
     </html>
   );

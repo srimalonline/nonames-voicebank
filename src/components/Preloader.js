@@ -15,11 +15,13 @@ export default function Preloader() {
 
     useEffect(() => {
         if (isVisible) {
-            gsap.fromTo(
+            const tl = gsap.timeline()
+            .fromTo(
                 ".preloader-logo",
                 { opacity: 0, scale: 0.5 }, // Initial state
                 { opacity: 1, scale: 1, duration: 1 } // Animation target
-            );
+            )
+            .to(".preloader-logo",{opacity:0,scale:5,rotate:-60});
         }
     }, [isVisible]);
 

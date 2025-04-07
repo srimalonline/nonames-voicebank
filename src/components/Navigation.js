@@ -1,15 +1,24 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 import Link from 'next/link';
-import Image from 'next/image'; 
+import Image from 'next/image';
+import {gsap} from "gsap";
+import { useRouter, usePathname } from 'next/navigation';
 
 const Navigation = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const pathname = usePathname()
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    useEffect(() => {
+        const tl = gsap.timeline()
+        .from("ul li",{opacity:0, y:-50, stagger:0.1},"2")
+
+    }, []);
     return (
         <nav className='flex flex-row justify-between container m-auto mt-5'>
            {/* Logo */}
@@ -23,10 +32,16 @@ const Navigation = () => {
                     />
             </Link>
             <ul className='navbar font-[800] flex-row justify-between'>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/about-us">About Us</Link></li>
-                <li><Link href="/voice">Voice</Link></li>
-                <li><Link href="/contact-us">Contact Us</Link></li>
+                {['/', '/about-us', '/voice', '/contact-us'].map((path, index) => (
+                    <li key={index}>
+                        <Link 
+                            href={path} 
+                            className={pathname === path ? 'active-link' : ''}
+                        >
+                            {path === '/' ? 'HOME' : path.replace('/', '').replace('-', ' ').toUpperCase()}
+                        </Link>
+                    </li>
+                ))}
             </ul>
             <button
                 className="md:hidden p-2 bg-white text-blue-500 rounded" 
