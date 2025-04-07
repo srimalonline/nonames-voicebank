@@ -17,8 +17,8 @@ export default function Preloader() {
         if (isVisible) {
             gsap.fromTo(
                 ".preloader-logo",
-                { opacity: 0, scale: 0.5 },
-                { opacity: 1, scale: 1, duration: 1 }
+                { opacity: 0, scale: 0.5 }, // Initial state
+                { opacity: 1, scale: 1, duration: 1 } // Animation target
             );
         }
     }, [isVisible]);
@@ -27,7 +27,12 @@ export default function Preloader() {
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-[#213e60] z-50">
-            <img src="/logo.svg" alt="Logo" className="preloader-logo" />
+            <img
+                src="/logo.svg"
+                alt="Logo"
+                className="preloader-logo"
+                style={{ opacity: 0, transform: "scale(0.5)" }} // Initial state
+            />
         </div>
     );
 }
