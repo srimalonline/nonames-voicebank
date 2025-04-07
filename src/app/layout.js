@@ -31,11 +31,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable}  ${playfairDisplay.variable} h-screen`}
       >
         <Navigation />
-        <Preloader />
-
-        <section className="container flex-1 m-auto mt-5">
+        {/* <Preloader /> */}
         {children}
-        </section>
       </body>
     </html>
   );

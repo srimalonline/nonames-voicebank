@@ -28,3 +28,13 @@ body {
 h1, h2, h3 {
   font-family: var(--font-playfair-display), serif;
 }
+
+.girl-image{
+  scale: 1.5;
+  transform: translate(-10px, 160px);
+}
+
+.boy-image{
+  scale: 1.5;
+  transform: translate(-45px, 150px);
+}

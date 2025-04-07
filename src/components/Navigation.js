@@ -20,7 +20,7 @@ const Navigation = () => {
 
     }, []);
     return (
-        <nav className='flex flex-row justify-between container m-auto mt-5'>
+        <nav className='flex flex-row justify-between container m-auto '>
            {/* Logo */}
            <Link href="/" className='flex m-5'>
                     <Image
