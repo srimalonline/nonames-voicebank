@@ -20,6 +20,8 @@ const Navigation = () => {
 
     }, []);
     return (
+        <div>
+
         <nav className='flex flex-row justify-between container m-auto '>
            {/* Logo */}
            <Link href="/" className='flex m-5'>
@@ -31,7 +33,7 @@ const Navigation = () => {
                         priority // Ensures the logo is loaded immediately
                     />
             </Link>
-            <ul className='navbar font-[800] flex-row justify-between'>
+            <ul className='md:hidden navbar font-[800] flex-row justify-between'>
                 {['/', '/about-us', '/voice', '/contact-us'].map((path, index) => (
                     <li key={index}>
                         <Link 
@@ -50,6 +52,7 @@ const Navigation = () => {
                 {isMobileMenuOpen ? 'Close' : 'Menu'}
             </button>
         </nav>
+        </div>
     );
 };
 

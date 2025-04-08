@@ -18,8 +18,7 @@ export default function Home() {
     .to(".mic-image", { scale:1.3,repeat:-1, yoyo:true, ease:"none",duration:5 },"<-=2")
   }, []);
   return (
-    <>
-      <div className="flex h-full">
+      <div className="flex flex-row">
         {/* First Column: Images */}
         <div className="flex flex-row w-1/2 overflow-hidden h-full relative">
           <Image
@@ -59,6 +58,5 @@ export default function Home() {
           </Link>
         </div>
       </div>
-    </>
   );
 }

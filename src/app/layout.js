@@ -28,11 +28,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  ${playfairDisplay.variable} h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable}  ${playfairDisplay.variable}`}
       >
+        <div className="flex h-screen flex-col justify-between"> 
+
         <Navigation />
         {/* <Preloader /> */}
         {children}
+        </div>
       </body>
     </html>
   );
